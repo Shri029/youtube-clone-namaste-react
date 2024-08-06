@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { closeMenu } from '../utils/appSlice';
 import { useSearchParams } from 'react-router-dom';
@@ -44,7 +45,11 @@ const WatchPage = () => {
         <div className='flex-row ml-2'> 
           {
             popularVideos.length>0 && 
-            popularVideos.map((video)=><PopularVideos info={video}/>
+            popularVideos.map((video)=>(
+              <Link key={video.id} to={"/watch?v=" + video.id} onClick={() => window.scroll(0,0)}>
+                <PopularVideos info={video}/>
+              </Link>
+            )
           )}
        </div>
     </div>
