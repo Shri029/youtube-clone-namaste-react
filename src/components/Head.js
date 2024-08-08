@@ -49,7 +49,7 @@ export const Head = () => {
           }));
     };
   return (
-    <div className='grid grid-flow-col p-4 my-2 shadow-lg'>
+    <div className='grid grid-flow-col p-4 my-2 shadow-md'>
         <div className='flex col-span-1'>
             <img 
                 onClick={()=>toggleMenuHandler()}
@@ -104,7 +104,8 @@ export const Head = () => {
             <img 
                 className="h-7" 
                 alt="user-icon" 
-                src="https://cdn-icons-png.flaticon.com/128/17468/17468126.png"/>
+                src="https://cdn-icons-png.flaticon.com/128/17468/17468126.png"
+            />
         </div>
     </div>
   )

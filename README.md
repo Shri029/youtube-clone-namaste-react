@@ -17,3 +17,12 @@ Time complexity to search in object = O(1)              {i: , ip:, iph, iphon: }
 
 new.Map();
 
+# Handling live data
+    -> Web sockets(Two way connection between UI & server)
+            - Two directional
+            - No regular interval
+            - Application like Trading platform, WhatsApp-Live chat apps
+
+    -> API Polling
+            - Uni-directional data movement
+            - Applications like Gmail, CrickBuzz(25s)
