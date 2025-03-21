@@ -39,14 +39,15 @@ export const Head = () => {
 
 
     const getSearchSuggestion = async () =>{
-        console.log("API call",searchQuery);
-        const data =  await fetch(YOUTUBE_SEARCH_API + searchQuery)
-        const res = await data.json();
-        setSuggestions(res[1]);
-          console.log(res);
-          dispatch(cacheSuggestions({
+        if(searchQuery)
+        {
+            const data =  await fetch(YOUTUBE_SEARCH_API + searchQuery)
+            const res = await data.json();
+            setSuggestions(res[1]);
+             console.log(res);
+            dispatch(cacheSuggestions({
             [searchQuery] : res[1],
-          }));
+          }));}
     };
   return (
     <div className='grid grid-flow-col p-4 my-2 shadow-md'>
